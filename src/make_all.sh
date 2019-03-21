@@ -7,4 +7,5 @@
 ./load_agg_tables.sh
 
 # rotate old data out
+./cleanup.sh
 

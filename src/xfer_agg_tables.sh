@@ -15,8 +15,7 @@ echo -n "Xfering aggregation tables"
 
 scp -rqp -i /home/stats-sync/.ssh/id_ecdsa $datadir $scptarget
 # delete old stuff
-ssh  -T -i /home/stats-sync/.ssh/id_ecdsa $target "rm -rf $olddatadir"
-rm -rf $olddatadir
+ssh  -T -i /home/stats-sync/.ssh/id_ecdsa $target "rm -r $olddatadir"
 
 echo ". Done."
 echo
