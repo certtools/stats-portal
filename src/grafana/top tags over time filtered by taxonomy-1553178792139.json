@@ -794,7 +794,7 @@
           "hide": false,
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  $__timeGroupAlias(date,$__interval),\n  sum(\"count\") as x,\n  \"feed.name\"\nFROM agg_ndim_day_all_tags\nWHERE\n  $__timeFilter(date) AND\n  \"classification.taxonomy\" in ( $taxonomy)  AND\n  \"protocol.application\" in ('https', 'rdp', 'tftp', 'cwmp', 'telnet', 'ntp', 'dns', 'ssdp', 'netbios-name', 'snmp') AND\n  \"classification.taxonomy\" != 'some random string LTHADGDHTGTGYjhgsytsath'  and  -- grafana workaround\n  \"source.asn\" in ( $asn )\nGROUP BY 1, \"feed.name\"\n-- HAVING max(\"count\") > 500\nORDER BY 1,3",
+          "rawSql": "SELECT\n  $__timeGroupAlias(date,$__interval),\n  sum(\"count\") as x,\n  \"feed.name\"\nFROM agg_ndim_day_all_tags\nWHERE\n  $__timeFilter(date) AND\n  \"classification.taxonomy\" in ( $taxonomy)  AND\n  \"classification.taxonomy\" != 'some random string LTHADGDHTGTGYjhgsytsath'  and  -- grafana workaround\n  \"source.asn\" in ( $asn )\nGROUP BY 1, \"feed.name\"\n-- HAVING max(\"count\") > 500\nORDER BY 1,3",
           "refId": "A",
           "select": [
             [
@@ -962,7 +962,7 @@
           "hide": false,
           "metricColumn": "none",
           "rawQuery": true,
-          "rawSql": "SELECT\n  $__timeGroupAlias(date,$__interval),\n  sum(\"count\") as x,\n  \"feed.provider\"\nFROM agg_ndim_day_all_tags\nWHERE\n  $__timeFilter(date) AND\n  \"classification.taxonomy\" in ( $taxonomy)  AND\n  -- \"protocol.application\" in ('https', 'rdp', 'tftp', 'cwmp', 'telnet', 'ntp', 'dns', 'ssdp', 'netbios-name', 'snmp') AND\n  \"classification.taxonomy\" != 'some random string LTHADGDHTGTGYjhgsytsath'   and -- grafana workaround\n  \"source.asn\" in ( $asn )\nGROUP BY 1, \"feed.provider\"\n-- HAVING max(\"count\") > 500\nORDER BY 1,3",
+          "rawSql": "SELECT\n  $__timeGroupAlias(date,$__interval),\n  sum(\"count\") as x,\n  \"feed.provider\"\nFROM agg_ndim_day_all_tags\nWHERE\n  $__timeFilter(date) AND\n  \"classification.taxonomy\" in ( $taxonomy)  AND\n \"classification.taxonomy\" != 'some random string LTHADGDHTGTGYjhgsytsath'   and -- grafana workaround\n  \"source.asn\" in ( $asn )\nGROUP BY 1, \"feed.provider\"\n-- HAVING max(\"count\") > 500\nORDER BY 1,3",
           "refId": "A",
           "select": [
             [
