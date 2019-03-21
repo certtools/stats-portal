@@ -1,0 +1,2 @@
+# m h  dom mon dow   command
+03  04 *   *   *     ( cd $HOME; date; ./make_all.sh ; date )

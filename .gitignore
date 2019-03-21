@@ -1,0 +1,33 @@
+*.bak
+*.swp
+*.pyc
+*.log
+*.*~
+*.mmdb
+*.profile
+.profile
+intelmq.egg-info
+build
+dist
+*.old
+.vagrant/
+*~
+.coverage
+.idea/
+htmlcov/
+*.pem
+*.key
+.eggs
+
+# Debian build filed
+debian/files
+debian/intelmq.postinst.debhelper
+debian/intelmq.prerm.debhelper
+debian/intelmq.substvars
+debian/intelmq/
+/.pc/*
+
+# custom stuff for this repo
+scratch/*
+*/~$*.pptx
+src/data/*.sql
